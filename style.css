@@ -34,13 +34,28 @@
             border-radius: 50%;
         }
 
-        input{
+        input[type=color]{
             width: 8rem;
+            height: 0rem;
             padding: 1rem 2.5rem;
             text-align: center;
             border-radius: 30px;
         }
-        
+        input[type=button]{
+            width: 8rem;
+            padding: 0.5rem 2.5rem;
+            border-radius: 30px;
+        }
+
+        .buttons{
+            max-width: 23rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1rem;
+        }
+
         .final-data{
             width: 80%;
             min-height: 10vh;
