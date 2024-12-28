@@ -82,7 +82,7 @@
         });
         
         i9.addEventListener("click", ()=>{
-            selector = "round";
+            selector = "circle";
             console.log(selector);
         });
 
@@ -90,18 +90,33 @@
         let finalData = document.querySelector(".final-data");
         let Generate = document.querySelector(".b3");
         let old = document.querySelector(".old");
+        let body = document.querySelector("body");
 
         Generate.addEventListener("click", ()=>{
 
+            if(!data1 || !data2){
+                alert("Please select both colors!");
+                return;
+            }
             //create html element and it's variable
             let data = document.createElement("h3");
-            
-            if(selector != "round"){   
-                data.innerText = `background-image: linear-gradient(to ${selector} , ${data1} , ${data2});`;
+
+            //syntax variable
+            let syntax = "";
+
+            if(selector !== "circle"){   
+                syntax = `linear-gradient(to ${selector} , ${data1} , ${data2})`;
+                data.innerText = `background-image: ${syntax}`;
             }
             else{
-                data.innerText = `background-image: radial-gradient(circle, ${data1} , ${data2});`;
+                syntax = `radial-gradient(circle, ${data1} , ${data2})`;
+                data.innerText = `background-image: ${syntax}`;
             }
+
+            //replace data with old once
             finalData.replaceChild(data, old);
             old = data;
+
+            //changing body gradient to created once
+            body.style.backgroundImage = syntax;
         });
