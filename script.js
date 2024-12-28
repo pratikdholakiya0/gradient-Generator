@@ -1,5 +1,4 @@
-
-        // choice events
+         // choice events
         let oldEvent = null;
         let choice = document.querySelector(".choice");
         choice.addEventListener("mouseup", (event)=>{
@@ -42,7 +41,7 @@
         let i9 = document.querySelector(".i9");
 
         i1.addEventListener("click", ()=>{
-            selector = "right";
+            selector = "top right";
             console.log(selector);
         });
         
@@ -52,17 +51,17 @@
         });
 
         i3.addEventListener("click", ()=>{
-            selector = "down right";
+            selector = "right bottom";
             console.log(selector);
         });
         
         i4.addEventListener("click", ()=>{
-            selector = "down";
+            selector = "bottom";
             console.log(selector);
         });
         
         i5.addEventListener("click", ()=>{
-            selector = "down left";
+            selector = "left bottom";
             console.log(selector);
         });
         
@@ -72,12 +71,12 @@
         });
         
         i7.addEventListener("click", ()=>{
-            selector = "up left";
+            selector = "left top";
             console.log(selector);
         });
         
         i8.addEventListener("click", ()=>{
-            selector = "up";
+            selector = "top";
             console.log(selector);
         });
         
