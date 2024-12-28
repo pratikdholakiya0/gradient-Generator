@@ -71,7 +71,7 @@
             border-left: 5px solid white;
         }
 
-        @media (max-width: 500px) {
+        @media (max-width: 200px) {
             html{
                 font-size: 80%;
             }
