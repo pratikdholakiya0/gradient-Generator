@@ -41,7 +41,7 @@
         let i9 = document.querySelector(".i9");
 
         i1.addEventListener("click", ()=>{
-            selector = "top right";
+            selector = "right top";
             console.log(selector);
         });
         
