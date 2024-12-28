@@ -85,7 +85,7 @@
             console.log(selector);
         });
 
-        //Gradient generation
+       //Gradient generation
         let finalData = document.querySelector(".final-data");
         let Generate = document.querySelector(".b3");
         let old = document.querySelector(".old");
@@ -118,4 +118,13 @@
 
             //changing body gradient to created once
             body.style.backgroundImage = syntax;
+
+            //changing pointer and adding title
+            data.style.cursor = "pointer";
+            data.title = "Click to copy";
+            
+            data.addEventListener("click",()=>{
+                navigator.clipboard.writeText(`background-image: ${syntax};`);
+                data.title = "copied";
+            });
         });
